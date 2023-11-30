@@ -12,8 +12,15 @@
       - install
       - core
   tasks:
-    - include_task: tasks/ssh.yml
-    - include_task: tasks/git-setup.yml
-    - include_task: tasks/dotfiles.yml
-    - include_task: tasks/basic-setup.yml
-
+    - name: ssh config
+      ansible.builtin.import_tasks:
+        file: tasks/ssh.yml
+    - name: git setup
+      ansible.builtin.import_tasks:
+        file: tasks/git-setup.yml
+    - name: dotfiles
+      ansible.builtin.import_tasks:
+         file: tasks/dotfiles.yml
+    - name: ssh config
+      ansible.builtin.import_tasks:
+        file: tasks/basic-setup.yml
