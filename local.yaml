@@ -3,6 +3,7 @@
     source_key: "./.ssh/id_rsa"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
     personal: "{{ lookup('env', 'HOME') }}/personal"
+  become: true
   pre_tasks:
   - name: Run the equivalent of "pacman -Syu" as a separate step
     community.general.pacman:
