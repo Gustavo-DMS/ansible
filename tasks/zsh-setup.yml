@@ -1,0 +1,8 @@
+  - name: Install zsh
+    community.general.pacman:
+      name: zsh
+      state: present
+  - name: Change shell
+    shell: chsh -s `command -v zsh`
+  - name: Install antigen
+    shell: curl -L git.io/antigen > antigen.zsh
