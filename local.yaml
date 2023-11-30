@@ -12,8 +12,8 @@
       - install
       - core
   tasks:
-    - include: tasks/ssh.yml
-    - include: tasks/git-setup.yml
-    - include: tasks/dotfiles.yml
-    - include: tasks/basic-setup.yml
+    - include_task: tasks/ssh.yml
+    - include_task: tasks/git-setup.yml
+    - include_task: tasks/dotfiles.yml
+    - include_task: tasks/basic-setup.yml
 
