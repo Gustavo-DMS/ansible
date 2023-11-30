@@ -21,6 +21,9 @@
     - name: dotfiles
       ansible.builtin.import_tasks:
          file: tasks/dotfiles.yml
-    - name: ssh config
+    - name: Basic setup
       ansible.builtin.import_tasks:
-        file: tasks/basic-setup.yml
+        file: tasks/basic-setup.yaml
+    - name: Basic setup
+      ansible.builtin.import_tasks:
+          file: tasks/zsh-setup.yml
