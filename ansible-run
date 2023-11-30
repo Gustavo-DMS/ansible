@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+## Install ansible
+sudo pacman -Syu
+sudo pacman -S git curl ansible allacrity
+
+## pull ansible
+sudo ansible-pull -U https://github.com/Gustavo-DMS/ansible.git
