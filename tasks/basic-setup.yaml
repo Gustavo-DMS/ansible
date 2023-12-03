@@ -1,20 +1,23 @@
 # TODO:Preparar esse script mais bonitinho
   - name: Install basedevel
+    become: true
     community.general.pacman:
       name: base-devel
       state: present
-  - name: Clone paru
-    ansible.builtin.git:
-      repo: https://aur.archlinux.org/paru.git
-  - name: cd paru
-    shell: cd paru
-  - name: make paru
-    shell: makepkg -si
-  - name: Requirements desktop
-    community.general.pacman:
-      name: hyprland-git dunst jq eww-wayland swayidle swaylock-effects-git swaylockd sway-audio-idle-inhibit-git bc pamixer light-git papirus-icon-theme playerctl xdg-desktop-portal-wlr grim slurp wl-clipboard socat swappy cliphist hyprpicker nm-connection-editor dictd wl-clip-persist-git blueberry hyprpaper
-      state: present
-      executable: paru
-      extra_args: -si
+  # - name: Clone paru
+  #   ansible.builtin.git:
+  #     repo: https://aur.archlinux.org/paru.git
+  #     dest: "{{ lookup('env', 'HOME') }}/paru"
+        # - name: paru
+        #   command:
+        #     chdir: $HOME/paru
+        #     cmd: makepkg -si
+        #  - name: Requirements desktop
+        #    become: true
+        #    community.general.pacman:
+        #      name: hyprland-git dunst jq eww-wayland swayidle swaylock-effects-git swaylockd sway-audio-idle-inhibit-git bc pamixer light-git papirus-icon-theme playerctl xdg-desktop-portal-wlr grim slurp wl-clipboard socat swappy cliphist hyprpicker nm-connection-editor dictd wl-clip-persist-git blueberry hyprpaper
+        #      state: present
+        #      executable: paru
+        #      extra_args: -si
 
 
