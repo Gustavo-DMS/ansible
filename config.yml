@@ -9,6 +9,7 @@ base_packages:
   - linux
   - linux-firmware
   - sudo
+  - curl
   # - dhcpcd
   # - netctl
   - networkmanager
@@ -22,26 +23,29 @@ base_packages:
   - neovim
 
 gpu_packages:
-  - mesa
-  - lib32-mesa
-  - xf86-video-amdgpu
-  - vulkan-radeon
-  - vulkan-headers
-  - lib32-vulkan-radeon
-  - amdvlk
-  - lib32-amdvlk
-  - libva-mesa-driver
-  - lib32-libva-mesa-driver
-  - mesa-vdpau
-  - lib32-mesa-vdpau
+  - nvidia-dkms
+  - nvidia-utils
+  - egl-wayland
+
+hyprland_packages:
+  - hyprcursor
+  - hypridle
+  - hyprland
+  - hyprlang
+  - hyprlock
+  - hyprpaper
+  - hyprutils
+  - hyprwayland-scanner
+  - xdg-desktop-portal-hyprland
 
 font_packages:
-  - ttf-ubuntu-font-family
-  - noto-fonts
-  - noto-fonts-emoji # for emoji
-  - ttf-dejavu
-  - ttf-roboto
-  - adobe-source-han-sans-otc-fonts # for CJK
+  # - ttf-ubuntu-font-family
+  # - noto-fonts
+  # - noto-fonts-emoji # for emoji
+  # - ttf-dejavu
+  # - ttf-roboto
+  # - adobe-source-han-sans-otc-fonts # for CJK
+    - ttf-jetbrains-mono-nerd
 
 other_packages:
   - linux-headers
@@ -53,9 +57,10 @@ other_packages:
   # - pass
   - stow
   - firefox
+  - chromium
   # - google-chrome
   - obsidian
-  # - spotify
+  - spotify
   # - spotify-adblock-git
   - alacritty
   # - yt-dlp
@@ -75,6 +80,9 @@ other_packages:
   # - p7zip
   # - radeontop
   - xclip
+  - dunst
+  - rofi
+  - sddm
 
 services_list:
   - sshd

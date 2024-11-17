@@ -1,0 +1,7 @@
+---
+- name: Install hyprland packages
+  become: true
+  kewlfft.aur.aur:
+    name: "{{ hyprland_packages }}"
+    use: yay
+    state: present

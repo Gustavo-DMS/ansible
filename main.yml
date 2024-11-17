@@ -10,11 +10,13 @@
     - import_tasks: tasks/update.yml
     - import_tasks: tasks/base-packages.yml
     # - import_tasks: tasks/swap.yml
-    - import_tasks: tasks/chaotic-aur.yml
-    - import_tasks: tasks/fonts.yml
-    - import_tasks: tasks/gnome.yml
+    # - import_tasks: tasks/chaotic-aur.yml
+    # - import_tasks: tasks/fonts.yml
+    # - import_tasks: tasks/gnome.yml
     - import_tasks: tasks/other-packages.yml
-    - import_tasks: tasks/other-services.yml
+    - import_tasks: tasks/hyprland-packages.yml
+    # - import_tasks: tasks/other-services.yml
     - import_tasks: tasks/dev-packages.yml
     - import_tasks: tasks/install-nvm.yml
+    - import_tasks: tasks/stow.yml
     - import_tasks: tasks/upgrade.yml
