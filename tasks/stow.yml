@@ -1,0 +1,34 @@
+---
+- name: Ensure Stow installed
+  become: yes
+  pacman:
+    name: stow
+    state: present
+
+- name: Build directories list
+  find:
+    paths: [dotfiles/]
+    recurse: no
+    file_type: directory
+  register: files
+
+- name: Deploy dotfiles!
+  become: yes
+  with_items: '{{ files.files }}'
+  shell: |
+    STOW_PATH={{ item.path | replace("dotfiles/", "") }}
+    OVERRIDE=$(cat ${STOW_PATH}/.override 2>/dev/null)
+    stow -v --ignore="\.override" -t ${OVERRIDE:-$HOME} ${STOW_PATH}
+  args:
+    chdir: ./dotfiles
+    executable: /bin/bash
+  loop_control:
+    label: |-
+      {% if output.stderr|length > 1 %}
+      {{ item.path }}
+      {{ output.stderr }}
+      {%- else %}
+      {{ item.path }}
+      {%- endif %}
+  register: output
+  changed_when: '"LINK" in output.stderr'

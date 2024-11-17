@@ -1,7 +1,7 @@
 ---
-update: true
-swapfile_path: /swapfile
-swapfile_size: 8G
+# update: true
+# swapfile_path: /swapfile
+# swapfile_size: 8G
 
 base_packages:
   - base
@@ -9,25 +9,17 @@ base_packages:
   - linux
   - linux-firmware
   - sudo
-  - dhcpcd
-  - netctl
+  # - dhcpcd
+  # - netctl
   - networkmanager
   - openssh
-  - nano
   - pipewire
   - man-db
   - man-pages
   - git
   - wget
   - reflector
-
-xorg_packages:
-  - xorg
-  - xorg-apps
-  - xorg-drivers
-  - xorg-apps
-  - xorg-fonts
-  - xorg-xinit
+  - neovim
 
 gpu_packages:
   - mesa
@@ -51,43 +43,37 @@ font_packages:
   - ttf-roboto
   - adobe-source-han-sans-otc-fonts # for CJK
 
-gnome_packages:
-  - gnome
-  - gnome-tweaks
-  - gnome-shell-extensions
-  - gdm
-
 other_packages:
   - linux-headers
-  - bash-completion
-  - mpv
-  - mpv-mpris
-  - aria2
+  # - bash-completion
+  # - mpv
+  # - mpv-mpris
+  # - aria2
   - yay
-  - pass
+  # - pass
   - stow
   - firefox
-  - google-chrome
+  # - google-chrome
   - obsidian
-  - spotify
-  - spotify-adblock-git
+  # - spotify
+  # - spotify-adblock-git
   - alacritty
-  - yt-dlp
-  - ntfs-3g
-  - gallery-dl
-  - neofetch
+  # - yt-dlp
+  # - ntfs-3g
+  # - gallery-dl
+  # - neofetch
   - btop
-  - geary
-  - browserpass-firefox
-  - browserpass-chromium
+  # - geary
+  # - browserpass-firefox
+  # - browserpass-chromium
   - tmux
-  - cpupower
-  - turbostat
-  - acpi
-  - bc
-  - update-grub
-  - p7zip
-  - radeontop
+  # - cpupower
+  # - turbostat
+  # - acpi
+  # - bc
+  # - update-grub
+  # - p7zip
+  # - radeontop
   - xclip
 
 services_list:
@@ -96,12 +82,10 @@ services_list:
   - reflector
 
 dev_packages:
-  - visual-studio-code-bin
-  - python
-  - python-pip
-  - nodejs
-  - npm
-  - rust
-  - jre
-  - jdk
-  - go
+  # - vscodium-bin
+  - rustup
+  - pyenv
+  - ripgrep
+  - zoxide
+  - bat
+  -
