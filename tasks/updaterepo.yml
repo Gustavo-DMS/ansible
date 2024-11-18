@@ -1,0 +1,3 @@
+- name: Update repo submodules
+  command: git submodule update --init --recursive
+

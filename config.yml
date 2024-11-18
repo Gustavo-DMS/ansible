@@ -3,6 +3,12 @@
 # swapfile_path: /swapfile
 # swapfile_size: 8G
 
+source_key: "{{ homedir }}/.ssh/id_rsa"
+dest_key: "{{ homedir }}/.ssh/id_rsa"
+
+homedir: "{{ lookup('env','HOME') }}"
+srcdir: "{{ homedir }}/.src"
+
 base_packages:
   - base
   - base-devel
