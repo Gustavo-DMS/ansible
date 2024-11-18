@@ -3,7 +3,7 @@
 # swapfile_path: /swapfile
 # swapfile_size: 8G
 
-source_key: "{{ homedir }}/.ssh/id_rsa"
+source_key: "./.ssh/id_rsa"
 dest_key: "{{ homedir }}/.ssh/id_rsa"
 
 homedir: "{{ lookup('env','HOME') }}"
@@ -16,8 +16,8 @@ base_packages:
   - linux-firmware
   - sudo
   - curl
-  # - dhcpcd
-  # - netctl
+  - dhcpcd
+  - netctl
   - networkmanager
   - openssh
   - pipewire
@@ -85,7 +85,7 @@ other_packages:
   # - update-grub
   # - p7zip
   # - radeontop
-  - xclip
+  # - xclip
   - dunst
   - rofi
   - sddm
