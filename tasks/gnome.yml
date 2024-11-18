@@ -1,6 +1,6 @@
 ---
 - name: Install gnome packages
-  become: true
+  # become: true
   kewlfft.aur.aur:
     name: "{{ gnome_packages }}"
     use: yay

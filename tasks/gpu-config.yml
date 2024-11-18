@@ -1,6 +1,6 @@
 ---
 - name: Install gpu packages
-  become: true
+  # become: true
   kewlfft.aur.aur:
     name: "{{ gpu_packages }}"
     use: yay

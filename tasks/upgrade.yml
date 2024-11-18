@@ -1,6 +1,6 @@
 ---
 - name: Update all packages
-  become: true
+  # become: true
   kewlfft.aur.aur:
     upgrade: true
     use: yay
