@@ -6,3 +6,10 @@
     use: yay
     state: present
   changed_when: false
+
+- name: setup nvida
+  ansible.builtin.file:
+    path: ./dotfiles/.extra/nvidia/nvidia.conf
+    dest: /etc/modprobe.d/nvidia.conf
+    state: link
+    become: yes

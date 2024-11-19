@@ -4,6 +4,7 @@
     state: present
 
 - name: Change shell
+  become: yes
   shell: chsh -s `command -v zsh`
 
 - name: Install antigen

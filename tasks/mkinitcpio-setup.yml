@@ -1,0 +1,13 @@
+---
+- name: Remove mkinitcpio
+  ansible.builtin.file:
+    path: /etc/mkinitcpio.conf
+    state: absent
+    become: yes
+
+- name: sym link mkinitcpio.conf
+  ansible.builtin.file:
+    src: ./dotfiles/.extra/mkinitcpio/mkinitcpio.conf
+    dest: /etc/mkinitcpio.conf
+    state: link
+    become: yes

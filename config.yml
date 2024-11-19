@@ -46,7 +46,7 @@ hyprland_packages:
   - dunst
   - pipewire
   - wireplumber
-  - hyprpolkitagent
+  - hyprpolkitagent-git
   - qt5-wayland
   - qt6-wayland
 
@@ -95,6 +95,8 @@ other_packages:
   - rofi
   - sddm
   - bluez
+  - bluez-utils
+  - blueberry
   - zsh
 
 services_list:
