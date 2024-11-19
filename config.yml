@@ -40,7 +40,7 @@ hyprland_packages:
   - hyprlang
   - hyprlock
   - hyprpaper
-  - hyprutils
+  # - hyprutils
   - hyprwayland-scanner
   - xdg-desktop-portal-hyprland
   - dunst
