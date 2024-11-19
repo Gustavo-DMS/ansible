@@ -7,6 +7,7 @@
     - dotfiles
     - install
     - ssh
+
 - name: Install ssh key
   copy:
     src: "{{ source_key }}"
@@ -16,6 +17,7 @@
     - dotfiles
     - install
     - ssh
+
 - name: Install ssh key public
   copy:
     src: "{{ source_key }}.pub"
@@ -33,3 +35,9 @@
 #     key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
 #   with_fileglob:
 #   - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
+
+- name: set git email
+  shell: git config --global user.email "pipe.gus2014@gmail.com"
+
+- name: set git name
+  shell: git config --global user.name "GustavoDMS"
