@@ -49,6 +49,9 @@ hyprland_packages:
   - hyprpolkitagent-git
   - qt5-wayland
   - qt6-wayland
+  - cmake
+  - meson
+  - cpio
 
 font_packages:
   # - ttf-ubuntu-font-family
@@ -107,7 +110,6 @@ services_list:
   - sddm
   - reflector.timer
   - fstrim.timer
-
 
 dev_packages:
   # - vscodium-bin
