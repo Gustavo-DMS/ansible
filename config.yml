@@ -95,6 +95,7 @@ other_packages:
   - rofi
   - sddm
   - bluez
+  - zsh
 
 services_list:
   - sshd
