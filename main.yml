@@ -22,4 +22,5 @@
     - import_tasks: tasks/dev-packages.yml
     - import_tasks: tasks/install-nvm.yml
     - import_tasks: tasks/stow.yml
+    - import_tasks: tasks/zsh-setup.yml
     - import_tasks: tasks/upgrade.yml

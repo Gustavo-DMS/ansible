@@ -17,3 +17,19 @@
 * sudo
 * reflector
 
+# TODO
+* get bluetooth working
+* rofi
+* pywall
+* waybar
+* sddm
+* clipboard
+* audio
+* dunst
+* hyprlock
+* hy3
+* hypridle
+* app ajustar confs
+* file manager
+* libreoffice
+* onedrive
