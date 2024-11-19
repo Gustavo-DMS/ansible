@@ -27,6 +27,10 @@ base_packages:
   - wget
   - reflector
   - neovim
+  - mkinitcpio-bluetooth
+  - mkinitcpio-numlock
+  - mtools
+  - acpid
 
 gpu_packages:
   - nvidia-dkms
@@ -45,6 +49,7 @@ hyprland_packages:
   - xdg-desktop-portal-hyprland
   - dunst
   - pipewire
+  - pipewire-pulse
   - wireplumber
   - hyprpolkitagent-git
   - qt5-wayland
@@ -52,6 +57,8 @@ hyprland_packages:
   - cmake
   - meson
   - cpio
+  - waybar
+  - wlogout
 
 font_packages:
   # - ttf-ubuntu-font-family
@@ -85,7 +92,6 @@ other_packages:
   # - geary
   # - browserpass-firefox
   # - browserpass-chromium
-  - tmux
   # - cpupower
   # - turbostat
   # - acpi
@@ -95,26 +101,42 @@ other_packages:
   # - radeontop
   # - xclip
   - dunst
-  - rofi
+  - rofi-wayland
   - sddm
   - bluez
   - bluez-utils
   - blueberry
   - zsh
+  - bibata-cursor-theme
+  - brightnessctl
+  - remmina
+  - papirus-icon-theme
+  - pavucontrol
+  - python-pywal
+  -
+
 
 services_list:
   - sshd
   - NetworkManager
-  - reflector
   - bluetooth
   - sddm
   - reflector.timer
   - fstrim.timer
+  - acpid
 
 dev_packages:
-  # - vscodium-bin
+  - vscodium-bin
   - rustup
   - pyenv
   - ripgrep
   - zoxide
   - bat
+  - dbeaver
+  - fzf
+  - gum
+  - jq
+  - less
+  - man-pages
+  - man-db
+  - tmux
