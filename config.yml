@@ -37,10 +37,10 @@ hyprland_packages:
   - hyprcursor
   - hypridle
   - hyprland
-  - hyprlang
+  # - hyprlang
   - hyprlock
   - hyprpaper
-  # - hyprutils
+  - hyprutils-git
   - hyprwayland-scanner
   - xdg-desktop-portal-hyprland
   - dunst
