@@ -34,13 +34,13 @@ gpu_packages:
   - egl-wayland
 
 hyprland_packages:
+  - hyprutils-git
   - hyprcursor
   - hypridle
   - hyprland
   # - hyprlang
   - hyprlock
   - hyprpaper
-  - hyprutils-git
   - hyprwayland-scanner
   - xdg-desktop-portal-hyprland
   - dunst
