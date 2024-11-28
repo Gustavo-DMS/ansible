@@ -6,9 +6,14 @@
     use: yay
     state: present
 
+- name: stat boot
+  stat: path=/boot/EFI/BOOT/BOOTX64.EFI
+  register: boot_stat
+
 - name: Rename bootloader
   become: yes
   command: sudo mv /boot/EFI/BOOT/BOOTX64.EFI /boot/EFI/BOOT/grubx64.efi
+  when: boot_stat.stat.exists
 
 - name: Copy shim boot loader
   become: yes
@@ -20,5 +25,5 @@
 
 - name: setup nvram
   become: yes
-  command: efibootmgr --unicode --disk /dev/sda --part 1 --create --label "Shim" --loader /EFI/BOOT/BOOTx64.EFI
+  command: efibootmgr --unicode --disk /dev/sda --part 1 --create --label "Shim" --loader /EFI/BOOT/BOOTX64.EFI
 

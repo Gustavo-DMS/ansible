@@ -11,9 +11,11 @@
 
 - name: Install hy3
   shell: hyprpm add https://github.com/outfoxxed/hy3
+  args:
+    creates: "{{ homedir}}/.local/share/hyprpm/hy3"
 
 - name: update plugins
   shell: hyprpm update
 
 - name: enable hy3
-  shell: hprpm enable hy3
+  shell: hyprpm enable hy3
