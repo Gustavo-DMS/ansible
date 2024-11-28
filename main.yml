@@ -25,4 +25,5 @@
     - import_tasks: tasks/zsh-setup.yml
     - import_tasks: tasks/gpu-config.yml
     - import_tasks: tasks/mkinitcpio-setup.yml
+    - import_tasks: tasks/setup-shim.yml
     - import_tasks: tasks/upgrade.yml

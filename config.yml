@@ -9,6 +9,7 @@ dest_key: "{{ homedir }}/.ssh/id_rsa"
 homedir: "{{ lookup('env','HOME') }}"
 srcdir: "{{ homedir }}/.src"
 
+# installed with pacman
 base_packages:
   - base
   - base-devel
@@ -30,7 +31,10 @@ base_packages:
   - neovim
   - mtools
   - acpid
+  - nemo
+  - efibootmgr
 
+# installed with yay
 gpu_packages:
   - nvidia-dkms
   - nvidia-utils
@@ -41,7 +45,6 @@ hyprland_packages:
   - hyprcursor
   - hypridle
   - hyprland
-  # - hyprlang
   - hyprlock
   - hyprpaper
   - hyprwayland-scanner
@@ -73,7 +76,7 @@ other_packages:
   # - mpv
   # - mpv-mpris
   # - aria2
-  - yay
+  # - yay
   # - pass
   - stow
   - firefox
@@ -112,6 +115,7 @@ other_packages:
   - papirus-icon-theme
   - pavucontrol
   - python-pywal
+  - shim-signed
 
 services_list:
   - sshd

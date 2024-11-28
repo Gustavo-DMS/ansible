@@ -3,3 +3,6 @@
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
   args:
     creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
+
+- name: install lts node
+  shell: nvm install --lts

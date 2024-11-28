@@ -1,0 +1,24 @@
+---
+- name: Install other packages
+  # become: true
+  kewlfft.aur.aur:
+    name: shim-signed
+    use: yay
+    state: present
+
+- name: Rename bootloader
+  become: yes
+  command: sudo mv /boot/EFI/BOOT/BOOTX64.EFI /boot/EFI/BOOT/grubx64.efi
+
+- name: Copy shim boot loader
+  become: yes
+  command: cp /usr/share/shim-signed/shimx64.efi /boot/EFI/BOOT/BOOTX64.EFI
+
+- name: copy other shim stuff
+  become: yes
+  command: cp /usr/share/shim-signed/mmx64.efi /boot/EFI/BOOT/
+
+- name: setup nvram
+  become: yes
+  command: efibootmgr --unicode --disk /dev/sda --part 1 --create --label "Shim" --loader /EFI/BOOT/BOOTx64.EFI
+

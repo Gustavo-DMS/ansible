@@ -21,6 +21,7 @@
 [x] get bluetooth working
 [x] audio
 [x] sddm
+[ ] setup secure boot (shim)
 [ ] rofi
 [ ] pywall
 [ ] waybar
