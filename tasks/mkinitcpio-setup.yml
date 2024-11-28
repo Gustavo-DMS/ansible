@@ -11,3 +11,18 @@
     dest: /etc/mkinitcpio.conf
     state: link
     become: yes
+
+- name: Install Dev packages
+  # become: true
+  kewlfft.aur.aur:
+    name: "{{ dev_packages }}"
+    use: yay
+    state: present
+  changed_when: false
+  loop:
+    - mkinitcpio-bluetooth
+    - mkinitcpio-numlock
+
+- name: rebuild mkinitcpio
+  become: yes
+  shell: mkinitcpio -p linux

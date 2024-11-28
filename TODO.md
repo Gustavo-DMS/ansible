@@ -18,18 +18,22 @@
 * reflector
 
 # TODO
-* get bluetooth working
-* rofi
-* pywall
-* waybar
-* sddm
-* clipboard
-* audio
-* dunst
-* hyprlock
-* hy3
-* hypridle
-* app ajustar confs
-* file manager
-* libreoffice
-* onedrive
+[x] get bluetooth working
+[x] audio
+[x] sddm
+[ ] rofi
+[ ] pywall
+[ ] waybar
+[ ] clipboard
+[ ] dunst
+[ ] hyprlock
+[ ] hy3
+[ ] hypridle
+[ ] app ajustar confs
+[ ] file manager
+[ ] libreoffice
+[ ] onedrive
+[ ] nvidia
+[ ] mkinitcpio
+[ ] hyprland config
+[ ] all configs

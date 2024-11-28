@@ -27,8 +27,8 @@ base_packages:
   - wget
   - reflector
   - neovim
-  - mkinitcpio-bluetooth
-  - mkinitcpio-numlock
+  # - mkinitcpio-bluetooth
+  # - mkinitcpio-numlock
   - mtools
   - acpid
 
