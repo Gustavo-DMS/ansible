@@ -14,6 +14,7 @@ base_packages:
   - base-devel
   - linux
   - linux-firmware
+  - linux-headers
   - sudo
   - curl
   - dhcpcd
@@ -27,8 +28,6 @@ base_packages:
   - wget
   - reflector
   - neovim
-  # - mkinitcpio-bluetooth
-  # - mkinitcpio-numlock
   - mtools
   - acpid
 
@@ -113,8 +112,6 @@ other_packages:
   - papirus-icon-theme
   - pavucontrol
   - python-pywal
-  -
-
 
 services_list:
   - sshd

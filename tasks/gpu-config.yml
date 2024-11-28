@@ -8,8 +8,8 @@
   changed_when: false
 
 - name: setup nvida
+  become: yes
   ansible.builtin.file:
-    path: ./dotfiles/.extra/nvidia/nvidia.conf
-    dest: /etc/modprobe.d/nvidia.conf
+    src: "{{ homedir }}/ansible/dotfiles/.extra/nvidia/nvidia.conf"
+    path: /etc/modprobe.d/nvidia.conf
     state: link
-    become: yes

@@ -1,21 +1,21 @@
 ---
 - name: Remove mkinitcpio
+  become: yes
   ansible.builtin.file:
     path: /etc/mkinitcpio.conf
     state: absent
-    become: yes
 
 - name: sym link mkinitcpio.conf
+  become: yes
   ansible.builtin.file:
-    src: ./dotfiles/.extra/mkinitcpio/mkinitcpio.conf
+    src: "{{ homedir }}/ansible/dotfiles/.extra/mkinitcpio/mkinitcpio.conf"
     dest: /etc/mkinitcpio.conf
     state: link
-    become: yes
 
-- name: Install Dev packages
+- name: Install mkinitcpio packages
   # become: true
   kewlfft.aur.aur:
-    name: "{{ dev_packages }}"
+    name: "{{ item }}"
     use: yay
     state: present
   changed_when: false
