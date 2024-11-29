@@ -8,14 +8,18 @@
 
 - name: build headers
   shell: hyprpm update
+  ignore_errors: true
 
 - name: Install hy3
   shell: hyprpm add https://github.com/outfoxxed/hy3
   args:
     creates: "{{ homedir}}/.local/share/hyprpm/hy3"
+  ignore_errors: true
 
 - name: update plugins
   shell: hyprpm update
+  ignore_errors: true
 
 - name: enable hy3
   shell: hyprpm enable hy3
+  ignore_errors: true
