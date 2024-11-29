@@ -18,25 +18,25 @@
 * reflector
 
 # TODO
-[x] get bluetooth working
-[x] audio
-[x] sddm
-[x] setup secure boot (shim)
-[x] symlink dotfiles
-[x] nvidia
-[x] mkinitcpio
-[x] file manager
-[X] hy3
-[x] pywall / wallpaper
-[x] rofi
-[ ] tmux scripts
-[ ] hyprland config
-[ ] waybar
-[ ] clipboard
-[ ] dunst
-[ ] hyprlock
-[ ] hypridle
-[ ] libreoffice
-[ ] onedrive
-[ ] all configs
-[ ] app ajustar confs
+- [x] get bluetooth working
+- [x] audio
+- [x] sddm
+- [x] setup secure boot (shim)
+- [x] symlink dotfiles
+- [x] nvidia
+- [x] mkinitcpio
+- [x] file manager
+- [X] hy3
+- [x] pywall / wallpaper
+- [x] rofi
+- [x] tmux scripts
+- [ ] hyprland config
+- [ ] waybar
+- [ ] clipboard
+- [ ] dunst
+- [ ] hyprlock
+- [ ] hypridle
+- [ ] libreoffice
+- [ ] onedrive
+- [ ] all configs
+- [ ] app ajustar confs
