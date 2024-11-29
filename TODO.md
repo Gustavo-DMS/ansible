@@ -21,20 +21,22 @@
 [x] get bluetooth working
 [x] audio
 [x] sddm
-[ ] setup secure boot (shim)
+[x] setup secure boot (shim)
+[x] symlink dotfiles
+[x] nvidia
+[x] mkinitcpio
+[x] file manager
+[X] hy3
+[ ] pywall / wallpaper
+[ ] tmux scripts
+[ ] hyprland config
 [ ] rofi
-[ ] pywall
 [ ] waybar
 [ ] clipboard
 [ ] dunst
 [ ] hyprlock
-[ ] hy3
 [ ] hypridle
-[ ] app ajustar confs
-[ ] file manager
 [ ] libreoffice
 [ ] onedrive
-[ ] nvidia
-[ ] mkinitcpio
-[ ] hyprland config
 [ ] all configs
+[ ] app ajustar confs

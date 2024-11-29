@@ -32,3 +32,9 @@
       {%- endif %}
   register: output
   changed_when: '"LINK" in output.stderr'
+
+- name: setup dotfiles folder
+  ansible.builtin.file:
+    src: "{{ homedir }}/ansible/dotfiles"
+    dest: "{{ homedir }}/dotfiles"
+    state: link
