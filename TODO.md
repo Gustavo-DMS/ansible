@@ -27,10 +27,10 @@
 [x] mkinitcpio
 [x] file manager
 [X] hy3
-[ ] pywall / wallpaper
+[x] pywall / wallpaper
+[x] rofi
 [ ] tmux scripts
 [ ] hyprland config
-[ ] rofi
 [ ] waybar
 [ ] clipboard
 [ ] dunst
